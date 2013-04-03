@@ -3,8 +3,8 @@
 Sometimes you feel the itch to open *all the files* at once. You want to pass a bunch of streams around, so the consumer does not need to worry where the data comes from.
 From a software design point-of-view this sounds entirely reasonable. Then there is that neat little function `fs.createReadStream()` that opens a file and gives you a nice `fs.ReadStream` to pass around, so you use what the mighty creator deities of node bestowed upon you.
 
-> Error: EMFILE, too many open files
--- node
+> `Error: EMFILE, too many open files`  
+> ─ sincerly, *node*
 
 This package provides two classes based on the node's new streams API (or `readable-stream` if you are using node a node version earlier than 0.10):
 
@@ -16,7 +16,7 @@ Creates a new readable stream. When the stream is first read from, it will call 
 
 ```javascript
 new lazystream.Readable(function () {
-  fs.createReadStream('/dev/urandom');
+  return fs.createReadStream('/dev/urandom');
 });
 ```
 
@@ -28,14 +28,20 @@ Creates a new writable stream. Just like the one above but for writable streams.
 
 ```javascript
 new lazystream.Writable(function () {
-  fs.createWriteStream('/dev/null');
+  return fs.createWriteStream('/dev/null');
 });
 ```
 
 ## Install
 
 ```console
-npm install lazystream --save
+$ npm install lazystream --save
+npm http GET https://registry.npmjs.org/readable-stream
+npm http 200 https://registry.npmjs.org/readable-stream
+npm http GET https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.2.tgz
+npm http 200 https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.2.tgz
+lazystream@0.0.2 node_modules/lazystream
+└── readable-stream@1.0.2
 ```
 
 ## Contributing
@@ -70,3 +76,4 @@ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
+
