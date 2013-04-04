@@ -3,6 +3,22 @@ var Writable = require('../lib/lazystream').Writable;
 var DummyWritable = require('./helper').DummyWritable;
 
 exports.writable = {
+  options: function(test) {
+    test.expect(3);
+
+    var writable = new Writable(function(options) {
+       test.ok(this instanceof Writable, "Writable should bind itself to callback's this");
+       test.equal(options.encoding, "utf-8", "Writable should make options accessible to callback");
+       this.ok = true;
+       return new DummyWritable([]);
+    }, {encoding: "utf-8"});
+
+    writable.write("test");
+
+    test.ok(writable.ok);
+
+    test.done();
+  },
   dummy: function(test) {
     var expected = [ 'line1\n', 'line2\n' ];
     var actual = [];

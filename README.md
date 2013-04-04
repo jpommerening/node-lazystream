@@ -1,7 +1,9 @@
+# Lazy Streams
+
 > *Create streams lazily when they are read from or written to.*  
 > `lazystream: 0.0.2` [![Build Status](https://travis-ci.org/jpommerening/node-lazystream.png?branch=master)](https://travis-ci.org/jpommerening/node-lazystream)  
 
-# Lazy Streams
+## Why?
 
 Sometimes you feel the itch to open *all the files* at once. You want to pass a bunch of streams around, so the consumer does not need to worry where the data comes from.
 From a software design point-of-view this sounds entirely reasonable. Then there is that neat little function `fs.createReadStream()` that opens a file and gives you a nice `fs.ReadStream` to pass around, so you use what the mighty creator deities of node bestowed upon you.
@@ -13,19 +15,35 @@ This package provides two classes based on the node's new streams API (or `reada
 
 ## Class: lazystream.Readable
 
+A wrapper for readable streams. Extends [`stream.PassThrough`](http://nodejs.org/api/stream.html#stream_class_stream_passthrough).
+
 ### new lazystream.Readable(fn [, options])
 
-Creates a new readable stream. When the stream is first read from, it will call `fn` to obtain a "real" stream and pipe that one through to the caller.
+* `fn` *{Function}*  
+  The function that the lazy stream will call to obtain the stream to actually read from.
+* `options` *{Object}*  
+  Options for the underlying `PassThrough` stream, accessible by `fn`.
+
+Creates a new readable stream. Once the stream is accessed (for example when you call its `read()` method, or attach a `data`-event listener) the `fn` function is called with the outer `lazystream.Readable` instance bound to `this`.
+
+If you pass an `options` object to the constuctor, you can access it in your `fn` function.
 
 ```javascript
-new lazystream.Readable(function () {
+new lazystream.Readable(function (options) {
   return fs.createReadStream('/dev/urandom');
 });
 ```
 
 ## Class: lazystream.Writable
 
+A wrapper for writable streams. Extends [`stream.PassThrough`](http://nodejs.org/api/stream.html#stream_class_stream_passthrough).
+
 ### new lazystream.Writable(fn [, options])
+
+* `fn` *{Function}*  
+  The function that the lazy stream will call to obtain the stream to actually write to.
+* `options` *{Object}*  
+  Options for the underlying `PassThrough` stream, accessible by `fn`.
 
 Creates a new writable stream. Just like the one above but for writable streams.
 

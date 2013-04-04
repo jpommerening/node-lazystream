@@ -18,6 +18,22 @@ exports.readable = {
         test.done();
       });
   },
+  options: function(test) {
+    test.expect(3);
+
+    var readable = new Readable(function(options) {
+       test.ok(this instanceof Readable, "Readable should bind itself to callback's this");
+       test.equal(options.encoding, "utf-8", "Readable should make options accessible to callback");
+       this.ok = true;
+       return new DummyReadable(["test"]);
+    }, {encoding: "utf-8"});
+
+    readable.read(4);
+
+    test.ok(readable.ok);
+
+    test.done();
+  },
   streams2: function(test) {
     var expected = [ 'line1\n', 'line2\n' ];
     var actual = [];
