@@ -24,7 +24,7 @@
     "node": ">= 0.6.3"
   },
   "scripts": {
-    "test": "nodeunit test/readable_test.js test/writable_test.js test/pipe_test.js"
+    "test": "nodeunit test/readable_test.js test/writable_test.js test/pipe_test.js test/fs_test.js"
   },
   "dependencies": {
     "readable-stream": ">= 0.3.1"
