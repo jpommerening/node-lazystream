@@ -1,10 +1,13 @@
+> *Create streams lazily when they are read from or written to.*  
+> `lazystream: 0.0.2` [![Build Status](https://travis-ci.org/jpommerening/node-lazystream.png?branch=master)](https://travis-ci.org/jpommerening/node-lazystream)  
+
 # Lazy Streams
 
 Sometimes you feel the itch to open *all the files* at once. You want to pass a bunch of streams around, so the consumer does not need to worry where the data comes from.
 From a software design point-of-view this sounds entirely reasonable. Then there is that neat little function `fs.createReadStream()` that opens a file and gives you a nice `fs.ReadStream` to pass around, so you use what the mighty creator deities of node bestowed upon you.
 
 > `Error: EMFILE, too many open files`  
-> ─ sincerly, *node*
+> ─ *node*
 
 This package provides two classes based on the node's new streams API (or `readable-stream` if you are using node a node version earlier than 0.10):
 
