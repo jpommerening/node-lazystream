@@ -30,7 +30,7 @@
     "readable-stream": "~1.0.2"
   },
   "devDependencies": {
-    "nodeunit": "~0.7.4"
+    "nodeunit": "^0.9.1"
   },
   "keywords": [
     "streams",
