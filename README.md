@@ -61,9 +61,19 @@ npm http GET https://registry.npmjs.org/readable-stream
 npm http 200 https://registry.npmjs.org/readable-stream
 npm http GET https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.2.tgz
 npm http 200 https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.2.tgz
-lazystream@0.0.2 node_modules/lazystream
+lazystream@0.2.0 node_modules/lazystream
 └── readable-stream@1.0.2
 ```
+
+## Changelog
+
+### v0.2.0
+
+- [#1](github.com/jpommerening/node-lazystream/pull/1): error events are now propagated
+
+### v0.1.0
+
+- _(this was the first release)_
 
 ## Contributing
 

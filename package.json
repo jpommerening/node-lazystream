@@ -1,11 +1,16 @@
 {
   "name": "lazystream",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Open Node Streams on demand.",
   "homepage": "https://github.com/jpommerening/node-lazystream",
   "author": {
-    "name": "J. Pommerening"
+    "name": "Jonas Pommerening",
+    "email": "jonas.pommerening@gmail.com",
+    "url": "https://npmjs.org/~jpommerening"
   },
+  "contributors": [
+    "Mario Casciaro <mariocasciaro@gmail.com>"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/jpommerening/node-lazystream.git"
@@ -33,6 +38,8 @@
     "nodeunit": "^0.9.1"
   },
   "keywords": [
+    "emfile",
+    "lazy",
     "streams",
     "stream"
   ]
