@@ -69,7 +69,7 @@ lazystream@0.2.0 node_modules/lazystream
 
 ### v0.2.0
 
-- [#1](github.com/jpommerening/node-lazystream/pull/1): error events are now propagated
+- [#1](https://github.com/jpommerening/node-lazystream/pull/1): error events are now propagated
 
 ### v0.1.0
 
