@@ -1,7 +1,7 @@
 # Lazy Streams
 
 > *Create streams lazily when they are read from or written to.*  
-> `lazystream: 0.0.2` [![Build Status](https://travis-ci.org/jpommerening/node-lazystream.png?branch=master)](https://travis-ci.org/jpommerening/node-lazystream)  
+> `lazystream: 0.2.0` [![Build Status](https://travis-ci.org/jpommerening/node-lazystream.png?branch=master)](https://travis-ci.org/jpommerening/node-lazystream)  
 
 ## Why?
 
