@@ -11,7 +11,7 @@ From a software design point-of-view this sounds entirely reasonable. Then there
 > `Error: EMFILE, too many open files`  
 > ─ *node*
 
-This package provides two classes based on the node's new streams API (or `readable-stream` if you are using node a node version earlier than 0.10):
+This package provides two classes based on the node's Streams3 API (courtesy of `readable-stream` to ensure a stable version).
 
 ## Class: lazystream.Readable
 
