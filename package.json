@@ -18,12 +18,7 @@
   "bugs": {
     "url": "https://github.com/jpommerening/node-lazystream/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/jpommerening/node-lazystream/blob/master/LICENSE-MIT"
-    }
-  ],
+  "license": "MIT",
   "main": "lib/lazystream.js",
   "engines": {
     "node": ">= 0.6.3"
@@ -32,7 +27,7 @@
     "test": "nodeunit test/readable_test.js test/writable_test.js test/pipe_test.js test/fs_test.js"
   },
   "dependencies": {
-    "readable-stream": "~1.0.2"
+    "readable-stream": "^2.0.5"
   },
   "devDependencies": {
     "nodeunit": "^0.9.1"
