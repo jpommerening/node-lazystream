@@ -1,7 +1,7 @@
 # Lazy Streams
 
 > *Create streams lazily when they are read from or written to.*  
-> `lazystream: 0.2.0` [![Build Status](https://travis-ci.org/jpommerening/node-lazystream.png?branch=master)](https://travis-ci.org/jpommerening/node-lazystream)  
+> `lazystream: 1.0.0` [![Build Status](https://travis-ci.org/jpommerening/node-lazystream.png?branch=master)](https://travis-ci.org/jpommerening/node-lazystream)  
 
 ## Why?
 
@@ -57,15 +57,15 @@ new lazystream.Writable(function () {
 
 ```console
 $ npm install lazystream --save
-npm http GET https://registry.npmjs.org/readable-stream
-npm http 200 https://registry.npmjs.org/readable-stream
-npm http GET https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.2.tgz
-npm http 200 https://registry.npmjs.org/readable-stream/-/readable-stream-1.0.2.tgz
-lazystream@0.2.0 node_modules/lazystream
-└── readable-stream@1.0.2
+lazystream@1.0.0 node_modules/lazystream
+└── readable-stream@2.0.5
 ```
 
 ## Changelog
+
+### v1.0.0
+
+- [#2](https://github.com/jpommerening/node-lazystream/pull/2): [unconditionally](https://r.va.gg/2014/06/why-i-dont-use-nodes-core-stream-module.html) use `readable-stream` _2.x_.
 
 ### v0.2.0
 

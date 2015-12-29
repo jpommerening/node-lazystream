@@ -1,6 +1,6 @@
 {
   "name": "lazystream",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "Open Node Streams on demand.",
   "homepage": "https://github.com/jpommerening/node-lazystream",
   "author": {
