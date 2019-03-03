@@ -1,6 +1,8 @@
 
-var _Readable = require('readable-stream/readable');
-var _Writable = require('readable-stream/writable');
+var {
+  Readable: _Readable,
+  Writable: _Writable
+} = require('readable-stream');
 var util = require('util');
 
 module.exports = {
@@ -36,4 +38,3 @@ DummyWritable.prototype._write = function _write(chunk, encoding, callback) {
   this.strings.push(chunk.toString());
   if (callback) callback();
 };
-
