@@ -21,13 +21,13 @@
   "license": "MIT",
   "main": "lib/lazystream.js",
   "engines": {
-    "node": ">= 0.6.3"
+    "node": ">= 6"
   },
   "scripts": {
     "test": "nodeunit test/readable_test.js test/writable_test.js test/pipe_test.js test/fs_test.js"
   },
   "dependencies": {
-    "readable-stream": "^2.0.5"
+    "readable-stream": "^3.2.0"
   },
   "devDependencies": {
     "nodeunit": "^0.9.1"
