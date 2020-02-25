@@ -1,6 +1,6 @@
 {
   "name": "lazystream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open Node Streams on demand.",
   "homepage": "https://github.com/jpommerening/node-lazystream",
   "author": {
@@ -27,11 +27,11 @@
     "test": "nodeunit test/readable_test.js test/writable_test.js test/pipe_test.js test/fs_test.js"
   },
   "dependencies": {
-    "readable-stream": "^3.3.0"
+    "readable-stream": "^3.6.0"
   },
   "devDependencies": {
-    "nodeunit": "^0.9.1",
-    "delay": "4.2.0"
+    "nodeunit": "^0.11.3",
+    "delay": "^4.3.0"
   },
   "keywords": [
     "emfile",
