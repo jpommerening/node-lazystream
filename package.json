@@ -26,6 +26,11 @@
   "scripts": {
     "test": "nodeunit test/readable_test.js test/writable_test.js test/pipe_test.js test/fs_test.js"
   },
+  "files": [
+    "lib/lazystream.js",
+    "test/*.js",
+    "test/*.md"
+  ],
   "dependencies": {
     "readable-stream": "^3.6.0"
   },
